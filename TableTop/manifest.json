@@ -2,11 +2,17 @@
     "manifest_version": 3,
     "name": "Table Top",
     "version": "1.0",
+    "icons": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
     "description": "An absolute GOATED Chrome extension",
-    "permissions": ["activeTab", "scripting", "storage"],
+    "permissions": ["activeTab", "scripting", "storage", "bookmarks", "tabs"],
     "host_permissions": ["<all_urls>"],
     "action": {
-      "default_popup": "popup.html"
+      "default_popup": "popup/popup.html"
     }, 
     "background": {
         "service_worker": "background.js"
@@ -14,12 +20,53 @@
     "content_scripts": [
         {
           "matches": ["file:///*"],
-          "js": ["content.js"]
+          "css": ["local_folder/local_folder.css"]
         }
       ],
     "chrome_url_overrides": {
-    "newtab": "homepage.html"
+    "newtab": "new_tab/new_tab.html"
+    },
+    "commands": {
+    "open-bookmark-1": {
+      "suggested_key": {
+        "default": "Alt+1"
+      },
+      "description": "Open first bookmark"
+    },
+    "open-bookmark-2": {
+      "suggested_key": {
+        "default": "Alt+2"
+      },
+      "description": "Open second bookmark"
+    },
+    "open-bookmark-3": {
+      "suggested_key": {
+        "default": "Alt+3"
+      },
+      "description": "Open third bookmark"
+    },
+    "open-bookmark-4": {
+      "suggested_key": {
+        "default": "Alt+4"
+      },
+      "description": "Open fourth bookmark"
+    },
+    "open-bookmark-5": {
+      "description": "Open fifth bookmark"
+    },
+    "open-bookmark-6": {
+      "description": "Open sixth bookmark"
+    },
+    "open-bookmark-7": {
+      "description": "Open seventh bookmark"
+    },
+    "open-bookmark-8": {
+      "description": "Open eighth bookmark"
+    },
+    "open-bookmark-9": {
+      "description": "Open ninth bookmark"
     }
+  }
     
 }
   

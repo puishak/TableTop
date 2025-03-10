@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  h1 {
+    background-color: #4c7faf;
+    color: white;
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  
+  #parentDirLinkBox {
+    margin: 10px auto;
+    text-align: center;
+  }
+  
+  #parentDirLink {
+    display: inline-block;
+    color: #4c7aaf;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+  }
+  
+  #parentDirLink:hover {
+    text-decoration: underline;
+  }
+  
+  table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  thead {
+    background-color: #4c7faf;
+    color: white;
+  }
+  
+  th,
+  td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+  th {
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  tbody tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .detailsColumn {
+    text-align: right;
+    font-size: 0.9em;
+  }
+  
+  a.icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.95em;
+    overflow-wrap: break-word;
+  }
+  
+  a.icon:hover {
+    color: #4CAF50;
+  }
+  
+  a.file::before,
+  a.dir::before,
+  a.up::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: cover;
+  }
+  
+  a.file::before {
+    background-image: url("data:image/png;base64,iVBORw...");
+  }
+  
+  a.dir::before {
+    background-image: url("data:image/png;base64,iVBORw...");
+  }
+  
+  a.up::before {
+    background-image: url("data:image/png;base64,iVBORw...");
+  }
+  
+  html[dir=rtl] a.icon {
+    flex-direction: row-reverse;
+  }
+  
+  @media (max-width: 768px) {
+    table {
+      width: 100%;
+      margin: 0;
+      border-radius: 0;
+    }
+  
+    th, td {
+      font-size: 0.9em;
+      padding: 10px;
+    }
+  
+    a.icon {
+      font-size: 0.85em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.2em;
+    }
+  
+    th, td {
+      padding: 8px;
+    }
+  }
+  
